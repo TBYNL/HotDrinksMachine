@@ -18,13 +18,13 @@ const PrepareDrink = ({ name, selectedStep }: props) => {
     if(selectedStep) {
       switch (selectedStep.type) {
         case StepType.Add:
-          return <img src={addImg} alt="kettle" />
+          return <img src={addImg} alt="kettle" className="loading-image" />
         case StepType.Boil:
-          return <img src={boilImg} alt="kettle" />
+          return <img src={boilImg} alt="kettle" className="loading-image" />
         case StepType.Brew:
-          return <img src={brewImg} alt="brew" />
+          return <img src={brewImg} alt="brew" className="loading-image" />
         case StepType.Pour:
-          return <img src={pourImg} alt="brew" />
+          return <img src={pourImg} alt="brew" className="loading-image" />
   
         default:
           return null
@@ -36,7 +36,7 @@ const PrepareDrink = ({ name, selectedStep }: props) => {
     <>
       <h1>Preparing {name}<img src={ellipsisImg} id="ellipsis-img" alt="ellipsis" /></h1>
       <div className="text-center">
-        <h2>{renderStepImage()}{selectedStep?.name}</h2>
+        <h2 className="step">{renderStepImage()}{selectedStep?.name}</h2>
       </div>
     </>
   );
