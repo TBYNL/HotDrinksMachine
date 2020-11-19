@@ -31,7 +31,6 @@ export const AddHotDrink = ({ handleClose }: props) => {
     const updatedSteps = [...steps]
     let convertedStepType = StepType.Add
 
-    debugger
     switch (newStepType) {
       case "Add":
         convertedStepType = StepType.Add

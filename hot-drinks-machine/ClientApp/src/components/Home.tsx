@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Fade, Slide } from 'react-awesome-reveal'
-import '../styles/Style.css'
+import '../styles/style.css'
 import SelectHotDrink from './SelectHotDrink'
 import AddHotDrink from './AddHotDrink'
 import HotDrink from '../types/HotDrink'
@@ -25,7 +25,6 @@ export const Home = () => {
     const convertedHotDrinks: HotDrink[] = userAddedHotDrinks.map(hotDrink => hotDrink && JSON.parse(hotDrink))
 
     const response = await fetch('hotDrinks')
-    debugger
     const defaultHotDrinks: HotDrink[] = await response.json()
 
     setHotDrinks(convertedHotDrinks.concat(defaultHotDrinks))

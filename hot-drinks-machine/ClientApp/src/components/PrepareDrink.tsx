@@ -16,7 +16,6 @@ const PrepareDrink = ({ name, selectedStep }: props) => {
 
   const renderStepImage = () => {
     if(selectedStep) {
-      debugger
       switch (selectedStep.type) {
         case StepType.Add:
           return <img src={addImg} alt="kettle" />
