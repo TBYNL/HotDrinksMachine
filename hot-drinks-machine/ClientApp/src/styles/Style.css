@@ -67,3 +67,34 @@ hr.drink-rule{
 .cancel-btn {
   color: grey;
 }
+
+@media (max-width: 997px) {
+  .main-container {
+    width: 90%;
+    text-align: center;
+  }
+
+  .added-steps-panel {
+    position: relative;
+    border: solid white 2px;
+    height: 100%;
+    padding: 15px;
+    right: 0;
+    width: 100%;
+  }
+  
+  .added-step {
+    border: dashed white 1px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+  }
+
+  .step {
+    display: block;
+  }
+
+  .loading-image {
+    width: 100%
+  }
+}
